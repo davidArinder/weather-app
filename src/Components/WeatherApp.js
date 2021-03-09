@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import styles from "./WeatherApp.module.css";
 
 const SUCCESS = 200;
 
@@ -62,7 +63,16 @@ class WeatherApp extends Component {
   }
 
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <button onClick={this.handleClick} className={styles.btn}>
+          Show Weather At My Location
+        </button>
+        {this.state.noLocation && (
+          <div className={styles.text}>{this.state.noLocation}</div>
+        )}
+      </div>
+    );
   }
 }
 
