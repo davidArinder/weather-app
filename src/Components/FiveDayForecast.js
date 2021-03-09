@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import FiveDayForecastRender from "./FiveDayForecastRender";
 
 const SUCCESS = "200";
 
