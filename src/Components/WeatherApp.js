@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import styles from "./WeatherApp.module.css";
+import FiveDayForecast from "./FiveDayForecast";
+import WeatherAppRender from "./WeatherAppRender";
 
 const SUCCESS = 200;
 
@@ -80,6 +82,13 @@ class WeatherApp extends Component {
         </button>
         {this.state.noLocation && (
           <div className={styles.text}>{this.state.noLocation}</div>
+        )}
+        <WeatherAppRender
+          weatherDetails={this.state.weatherDetails}
+          handleToggle={this.handleToggle}
+        />
+        {this.state.fiveDayForecastDisplay && (
+          <FiveDayForecast lat={this.state.lat} lng={this.state.lng} />
         )}
       </div>
     );
