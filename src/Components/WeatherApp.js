@@ -8,6 +8,8 @@ const SUCCESS = 200;
 class WeatherApp extends Component {
   constructor() {
     super();
+    this.handleClick = this.handleClick.bind(this);
+    this.handleToggle = this.handleToggle.bind(this);
     this.state = {
       lat: null,
       lng: null,
@@ -66,6 +68,7 @@ class WeatherApp extends Component {
     }
   }
 
+  // Toggle whether to show Five Day Forecast or not
   handleToggle() {
     if (this.state.fiveDayForecastDisplay === false) {
       this.setState({ fiveDayForecastDisplay: true });
