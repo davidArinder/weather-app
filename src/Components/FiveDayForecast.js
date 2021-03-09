@@ -37,7 +37,11 @@ class FiveDayForecast extends Component {
   }
 
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <FiveDayForecastRender weatherDetails={this.state.weatherDetails} />
+      </div>
+    );
   }
 }
 
