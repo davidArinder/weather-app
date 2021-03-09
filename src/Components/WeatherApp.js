@@ -15,6 +15,8 @@ class WeatherApp extends Component {
         icon: null,
         location: "",
       },
+      iveDayForecastDisplay: false,
+      noLocation: "",
     };
   }
 
@@ -59,6 +61,14 @@ class WeatherApp extends Component {
       this.setState({
         noLocation: "Please allow browser access to location data.",
       });
+    }
+  }
+
+  handleToggle() {
+    if (this.state.fiveDayForecastDisplay === false) {
+      this.setState({ fiveDayForecastDisplay: true });
+    } else {
+      this.setState({ fiveDayForecastDisplay: false });
     }
   }
 
