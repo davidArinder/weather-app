@@ -26,7 +26,6 @@ class FiveDayForecast extends Component {
               temperature: item.main.temp,
               description: item.weather[0].main,
               icon: `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`,
-              //   date: item.dt_txt,
               timestamp: new Date(item.dt * 1000).toString(),
             })),
           });
