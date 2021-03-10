@@ -33,7 +33,7 @@ class WeatherApp extends Component {
           lng: position.coords.longitude,
         });
       },
-      (err) => {
+      () => {
         alert("The weather app won't work if you don't allow location access.");
       }
     );
@@ -64,7 +64,7 @@ class WeatherApp extends Component {
     } else {
       this.setState({
         noLocation:
-          "Please close and refresh your browser and accept access to location data.",
+          "Something went wrong collecting your location data. Please check your location settings and refresh the page.",
       });
     }
   }
@@ -84,7 +84,7 @@ class WeatherApp extends Component {
         <button onClick={this.handleClick} className={styles.btn}>
           Show Weather At My Location
         </button>
-        {this.state.noLocation && (
+        {this.state.noLocation && !this.state.lat && (
           <div className={styles.text}>{this.state.noLocation}</div>
         )}
         <WeatherAppRender
