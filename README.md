@@ -5,3 +5,10 @@ This is a simple weather app that shows weather information at the user's curren
 ## To Run the App
 
 Clone the codebase, install, and use `yarn start`. Before it will work, though, you'll need to get an API key from [OpenWeatherMap](https://openweathermap.org/) by signing up for an account. Then create a .env file in the root of the app and add `REACT_APP_API_KEY=` and append your API key with no spaces or quotations.
+
+## Next Steps
+
+Here are some initial things I could do to continue to develop the app.
+
+1. Cache the FiveDayForecast API call so the API isn't queried everytime the button is pushed.
+2. Add a back-end with Node and Express to handle API calls.
