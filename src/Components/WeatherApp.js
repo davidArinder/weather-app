@@ -19,7 +19,7 @@ class WeatherApp extends Component {
         icon: null,
         location: "",
       },
-      iveDayForecastDisplay: false,
+      fiveDayForecastDisplay: false,
       noLocation: "",
     };
   }
@@ -33,8 +33,8 @@ class WeatherApp extends Component {
           lng: position.coords.longitude,
         });
       },
-      (error) => {
-        alert("Error Code = " + error.code + " - " + error.message);
+      (err) => {
+        alert("The weather app won't work if you don't allow location access.");
       }
     );
   }
@@ -63,7 +63,8 @@ class WeatherApp extends Component {
         });
     } else {
       this.setState({
-        noLocation: "Please allow browser access to location data.",
+        noLocation:
+          "Please close and refresh your browser and accept access to location data.",
       });
     }
   }

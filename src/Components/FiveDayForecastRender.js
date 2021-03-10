@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./FiveDayForecastRender.module.css";
 
 function FiveDayForecastRender(props) {
