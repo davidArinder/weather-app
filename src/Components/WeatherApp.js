@@ -64,7 +64,7 @@ class WeatherApp extends Component {
     } else {
       this.setState({
         noLocation:
-          "Something went wrong collecting your location data. Please check your location settings and refresh the page.",
+          "Something went wrong collecting your location data. Please check your location settings and reload your browser.",
       });
     }
   }
